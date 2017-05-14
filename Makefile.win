@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = basic.o $(RES)
-LINKOBJ  = basic.o $(RES)
+OBJ      = basic.o naiveAI.o $(RES)
+LINKOBJ  = basic.o naiveAI.o $(RES)
 LIBS     = -L"C:/Program Files/Dev-Cpp/MinGW32/lib" -static-libstdc++ -static-libgcc -O2 -lgdi32 -fpermissive  
 INCS     = -I"C:/Program Files/Dev-Cpp/MinGW32/include" 
 CXXINCS  = -I"C:/Program Files/Dev-Cpp/MinGW32/include" 
@@ -27,3 +27,6 @@ $(BIN): $(OBJ)
 
 basic.o: basic.cpp
 	$(CPP) -c basic.cpp -o basic.o $(CXXFLAGS)
+
+naiveAI.o: naiveAI.cpp
+	$(CPP) -c naiveAI.cpp -o naiveAI.o $(CXXFLAGS)
